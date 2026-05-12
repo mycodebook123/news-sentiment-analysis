@@ -1,6 +1,5 @@
-data/raw/
+data/
 __pycache__/
-.env
-.venv/
 .ipynb_checkpoints/
-data/raw/*.csv
+.venv/
+*.csv

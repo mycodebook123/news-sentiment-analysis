@@ -1,0 +1,16 @@
+name: Financial Analysis CI
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v3
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+    - name: Install dependencies
+      run: |
+        pip install pandas yfinance nltk pandas_ta matplotlib seaborn
+    - name: Environment Check
+      run: python -c "import pandas; print('Ready')"
